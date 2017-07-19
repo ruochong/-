@@ -15,14 +15,15 @@ function getRandom(){
     return number.join('');
 }
 function flag(){
-    const number=getRandom();
-    const num=readlineSync.question(`System generate random number is ${number}\n
+    var number=getRandom();
+    var num=readlineSync.question(`System generate random number is ${number}\n
     Please input your guessed number: `);
 
     var result;
     var countA=0;
     var countB=0;
-    console.log(number);
+    //console.log(number);
+    //console.log(num);
 
     for(var i=0;i<4;i++){
     
@@ -38,6 +39,6 @@ function flag(){
 
     return result;
 }
-console.log(flag());
+//console.log(flag());
 module.exports.getRandom=getRandom;
 module.exports.flag=flag;
