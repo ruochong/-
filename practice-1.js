@@ -1,23 +1,35 @@
-const number='1234';
-//const num='1253';
-
-function flag(num,number){
-    var result;
-    var a=[];
-    var b=[];
-    a=num.split('');
-    b=number.split('');
-    var countA=0;
-    var countB=0;
-    for(var i=0;i<a.length;i++){
-    
-        if(a[i]===b[i]){
-            countA++;
+const readlineSync = require('readline-sync');
+//const num='1234';
+function getRandom(){
+    var number=[];
+    number[0]=parseInt(10*Math.random());
+    for(var i=1;i<4;i++){
+       var a=parseInt(10*Math.random());
+        if(number.indexOf(a)===-1){
+            number[i]=a;
+        }
+        else{
+            i=i-1;
         }
     }
-    for(var j=0;j<a.length;j++){
+    return number.join('');
+}
+function flag(){
+    const number=getRandom();
+    const num=readlineSync.question(`System generate random number is ${number}\n
+    Please input your guessed number: `);
 
-        if(b.indexOf(a[j])!=-1){
+    var result;
+    var countA=0;
+    var countB=0;
+    console.log(number);
+
+    for(var i=0;i<4;i++){
+    
+        if(num[i]===number[i]){
+            countA++;
+        }
+        if(number.indexOf(num[i])!=-1){
             countB++;
         }
     }
@@ -26,4 +38,6 @@ function flag(num,number){
 
     return result;
 }
-console.log(flag(num,number));
+console.log(flag());
+module.exports.getRandom=getRandom;
+module.exports.flag=flag;

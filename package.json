@@ -1,0 +1,23 @@
+{
+  "name": "si",
+  "version": "1.0.0",
+  "description": "wu",
+  "main": "practice-1-spec.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruochong/-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruochong/-/issues"
+  },
+  "homepage": "https://github.com/ruochong/-#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.7",
+    "sinon": "^2.3.8"
+  }
+}
