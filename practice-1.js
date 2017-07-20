@@ -15,7 +15,7 @@ function getRandom(){
     return number.join('');
 }
 function flag(){
-    var number=getRandom();
+    var number=this.getRandom();
     var num=readlineSync.question(`System generate random number is ${number}\n
     Please input your guessed number: `);
 
